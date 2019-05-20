@@ -22,7 +22,7 @@ def menu():
     print(Fore.CYAN + " [4]" + Fore.WHITE + " Paste site tools")
     print(Fore.CYAN + " [5]" + Fore.WHITE + " Dark web tools")
     print()
-    print(Fore.YELLOW + " Ctrl + C to exit")
+    print(Fore.RED + " [x]" + Fore.WHITE + " Exit")
     print()
     directory = input(" Select a directory: ")
     print()
@@ -36,6 +36,7 @@ def menu():
         print(Fore.CYAN + " [5]" + Fore.WHITE + " SpiderFoot - automate OSINT from hundreds of sources")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
         print()
+        
         # Recon Tools
         def recon():
             time.sleep(0.5)
@@ -63,6 +64,7 @@ def menu():
         print(Fore.CYAN + " [4]" + Fore.WHITE + " Sherlock - search username availability across all social platforms")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
         print()
+        
         # People tools
         def people():
             time.sleep(0.5)
@@ -80,6 +82,7 @@ def menu():
             people()
         people()
     if directory == "3":
+        
         # Social tools
         def socialMenu():
             print(Fore.YELLOW + " Social media tools" + Fore.WHITE + " - collect OSINT from various social media platforms")
@@ -98,34 +101,64 @@ def menu():
             time.sleep(0.5)
             toolSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
             print()
+            
+            # Facebook
             if toolSelect == "1":
                 print(Fore.YELLOW + " Facebook tools")
                 print()
                 print(Fore.CYAN + " [1]" + Fore.WHITE + " Entropy - Facebook OSINT Collection and Analysis Tool")
                 print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
                 print()
-                facebookSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
-                if facebookSelect == "1":
-                    webbrowser.open("https://github.com/andrew-vii/Entro.py")
-                elif facebookSelect == "<":
-                    socialMenu()
+                def facebookSelect():
+                    time.sleep(0.5)
+                    facebookSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+                    print()
+                    if facebookSelect == "1":
+                        webbrowser.open("https://github.com/andrew-vii/Entro.py")
+                    elif facebookSelect == "<":
+                        socialMenu()
+                facebookSelect()
+                
+            # Twitter
             elif toolSelect == "2":
+                print(Fore.YELLOW + " Twitter tools")
                 print()
-                print(" Twitter tools")
+                print(Fore.CYAN + " [1]" + Fore.WHITE + " Twint - an advanced Twitter scraper")
+                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
+                print()
+                def twitterSelect():
+                    time.sleep(0.5)
+                    twitterSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+                    print()
+                    if twitterSelect == "1":
+                        webbrowser.open("https://github.com/twintproject/twint")
+                    elif twitterSelect == "<":
+                        socialMenu()
+                twitterSelect()
+                
+            # Instagram
             elif toolSelect == "3":
+                print(Fore.YELLOW + " Instagram tools")
                 print()
-                print(" Instagram tools")
+                print(Fore.CYAN + " [1]" + Fore.WHITE + " InstaLooter - Instagram scraper for photos and videos (no-API)")
+                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
+                print()
+                def instagramSelect():
+                    time.sleep(0.5)
+                    instagramSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+                    print()
+                    if instagramSelect == "1":
+                        webbrowser.open("https://github.com/althonos/InstaLooter")
+                    elif instagramSelect == "<":
+                        socialMenu()
+                instagramSelect()
             elif toolSelect == "4":
-                print()
                 print(" SnapChat tools")
             elif toolSelect == "5":
-                print()
                 print(" Reddit tools")
             elif toolSelect == "6":
-                print()
                 print(" LinkedIn tools")
             elif toolSelect == "7":
-                print()
                 print(" YouTube tools")
             elif toolSelect == "<":
                 menu()
@@ -137,10 +170,12 @@ def menu():
         print(Fore.CYAN + " [1]" + Fore.WHITE + " Scavenger - a crawler bot for credential leaks")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
         print()
+        
         # Paste tools
         def paste():
             time.sleep(0.5)
             toolSelect = input(Fore.YELLOW + " Select: ")
+            print()
             if toolSelect == "1":
                 webbrowser.open("https://github.com/rndinfosecguy/Scavenger")
             if toolSelect == "<":
@@ -153,6 +188,7 @@ def menu():
         print(Fore.CYAN + " [1]" + Fore.WHITE + " TorBot - dark web OSINT tool")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
         print()
+        
         # Dark web tools
         def dark():
             time.sleep(0.5)
@@ -163,4 +199,6 @@ def menu():
                 menu()
             dark()
         dark()
+    if directory == "x":
+        exit()
 menu()
