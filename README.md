@@ -1,5 +1,5 @@
 # EncycloPY
-![alt text](https://ibb.co/BZSv2FG)
+![alt text](https://i.imgur.com/0jWuFQP.png)
 
 Navigate this basic UI to find free OSINT tools.
 
