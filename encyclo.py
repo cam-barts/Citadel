@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
-import colorama
+from colorama import init
+from colorama import Fore
 import webbrowser
+import time
+
+init(autoreset=True)
 
 def menu():
     print()
@@ -12,12 +16,13 @@ def menu():
 ╚══════╝╚═╝  ╚═══╝ ╚═════╝   ╚═╝    ╚═════╝╚══════╝ ╚═════╝ ╚═╝        ╚═╝   """)
     print("An encyclopedia of OSINT tools")
     print()
-    print("[1]" + " Recon tools")
-    print("[2]" + " People search tools")
-    print("[3]" + " Social media tools")
-    print("[4]" + " Paste site tools")
-    print("[5]" + " Dark web tools")
-    print("[x]" + " Exit")
+    print(Fore.CYAN + "[1]" + Fore.WHITE + " Recon tools")
+    print(Fore.CYAN + "[2]" + Fore.WHITE + " People search tools")
+    print(Fore.CYAN + "[3]" + Fore.WHITE + " Social media tools")
+    print(Fore.CYAN + "[4]" + Fore.WHITE + " Paste site tools")
+    print(Fore.CYAN + "[5]" + Fore.WHITE + " Dark web tools")
+    print()
+    print(Fore.YELLOW + "Ctrl + C to exit")
     print()
     directory = input("Select a directory: ")
     print()
@@ -32,6 +37,7 @@ def menu():
         print("[<]" + " Main menu")
         print()
         def recon():
+            time.sleep(1)
             toolSelect = input("Select: ")
             if toolSelect == "1":
                 webbrowser.open('https://github.com/s0md3v/Photon') # Go to Photon GitHub page
@@ -47,6 +53,7 @@ def menu():
                 menu()
             elif toolSelect == "x":
                 exit()
+            recon()
         recon()
     if directory == "2":
         print("People search tools - extract OSINT from multiple databases")
@@ -56,6 +63,7 @@ def menu():
         print("[<]" + " Main menu")
         print()
         def people():
+            time.sleep(1)
             toolSelect = input("Select: ")
             if toolSelect == "1":
                 webbrowser.open('https://github.com/xillwillx/skiptracer') # Go to SkipTracer GitHub page
@@ -63,11 +71,7 @@ def menu():
                 webbrowser.open('https://github.com/lulz3xploit/LittleBrother') # Go to LittleBrother GitHub page
             elif toolSelect == "<":
                 menu()
-            forward = input("Continue [y/n]: ") # Loop teh menu until Main menu is selected
-            if forward == "y":
-                people()
-            elif forward == "n":
-                exit()
+            people()
         people()
     if directory == "3":
         def socialMenu():
@@ -84,9 +88,9 @@ def menu():
             print()
         socialMenu()
         def social():
+            time.sleep(1)
             toolSelect = input("Select: ")
             if toolSelect == "1":
-                print()
                 print("Facebook tools")
                 print()
                 print("[1]" + " Entropy - Facebook OSINT Collection and Analysis Tool")
@@ -95,7 +99,7 @@ def menu():
                 facebookSelect = input("Select: ")
                 if facebookSelect == "1":
                     webbrowser.open("https://github.com/andrew-vii/Entro.py")
-                if facebookSelect == "<":
+                elif facebookSelect == "<":
                     socialMenu()
             elif toolSelect == "2":
                 print()
@@ -119,4 +123,34 @@ def menu():
                 menu()
             social()
         social()
+    if directory == "4":
+        print("Paste site tools - collect OSINT from multiple paste sites")
+        print()
+        print("[1]" + " Scavenger - a crawler bot for credential leaks")
+        print("[<]" + " Main menu")
+        print()
+        def paste():
+            time.sleep(1)
+            toolSelect = input("Select: ")
+            if toolSelect == "1":
+                webbrowser.open("https://github.com/rndinfosecguy/Scavenger")
+            if toolSelect == "<":
+                menu()
+            paste()
+        paste()
+    if directory == "5":
+        print("Dark web tools - collect OSINT from dark web sources")
+        print()
+        print("[1]" + " TorBot - dark web OSINT tool")
+        print("[<]" + " Main menu")
+        print()
+        def dark():
+            time.sleep(1)
+            toolSelect = input("Select: ")
+            if toolSelect == "1":
+                webbrowser.open("https://github.com/DedSecInside/TorBot")
+            if toolSelect == "<":
+                menu()
+            dark()
+        dark()
 menu()
