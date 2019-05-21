@@ -10,9 +10,9 @@ def menu():
     print()
     print(""" ███████╗███╗   ██╗ ██████╗██╗   ██╗ ██████╗██╗      ██████╗ ██████╗ ██╗   ██╗
  ██╔════╝████╗  ██║██╔════╝╚██╗ ██╔╝██╔════╝██║     ██╔═══██╗██╔══██╗╚██╗ ██╔╝
- █████╗  ██╔██╗ ██║██║      ╚████╔╝ ██║     ██║     ██║   ██║██████╔╝ ╚████╔╝ 
- ██╔══╝  ██║╚██╗██║██║       ╚██╔╝  ██║     ██║     ██║   ██║██╔═══╝   ╚██╔╝  
- ███████╗██║ ╚████║╚██████╗   ██║   ╚██████╗███████╗╚██████╔╝██║        ██║   
+ █████╗  ██╔██╗ ██║██║      ╚████╔╝ ██║     ██║     ██║   ██║██████╔╝ ╚████╔╝
+ ██╔══╝  ██║╚██╗██║██║       ╚██╔╝  ██║     ██║     ██║   ██║██╔═══╝   ╚██╔╝
+ ███████╗██║ ╚████║╚██████╗   ██║   ╚██████╗███████╗╚██████╔╝██║        ██║
  ╚══════╝╚═╝  ╚═══╝ ╚═════╝   ╚═╝    ╚═════╝╚══════╝ ╚═════╝ ╚═╝        ╚═╝   """)
     print(" An encyclopedia of OSINT tools")
     print()
@@ -36,7 +36,7 @@ def menu():
         print(Fore.CYAN + " [5]" + Fore.WHITE + " SpiderFoot - automate OSINT from hundreds of sources")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
         print()
-        
+
         # Recon Tools
         def recon():
             time.sleep(0.5)
@@ -55,6 +55,7 @@ def menu():
                 menu()
             recon()
         recon()
+
     if directory == "2":
         print(Fore.YELLOW + " People search tools" + Fore.WHITE + " - extract OSINT from multiple databases")
         print()
@@ -64,7 +65,7 @@ def menu():
         print(Fore.CYAN + " [4]" + Fore.WHITE + " Sherlock - search username availability across all social platforms")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
         print()
-        
+
         # People tools
         def people():
             time.sleep(0.5)
@@ -81,8 +82,9 @@ def menu():
                 menu()
             people()
         people()
+
     if directory == "3":
-        
+
         # Social tools
         def socialMenu():
             print(Fore.YELLOW + " Social media tools" + Fore.WHITE + " - collect OSINT from various social media platforms")
@@ -97,11 +99,12 @@ def menu():
             print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
             print()
         socialMenu()
+
         def social():
             time.sleep(0.5)
             toolSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
             print()
-            
+
             # Facebook
             if toolSelect == "1":
                 print(Fore.YELLOW + " Facebook tools")
@@ -118,7 +121,7 @@ def menu():
                     elif facebookSelect == "<":
                         socialMenu()
                 facebookSelect()
-                
+
             # Twitter
             elif toolSelect == "2":
                 print(Fore.YELLOW + " Twitter tools")
@@ -135,7 +138,7 @@ def menu():
                     elif twitterSelect == "<":
                         socialMenu()
                 twitterSelect()
-                
+
             # Instagram
             elif toolSelect == "3":
                 print(Fore.YELLOW + " Instagram tools")
@@ -152,14 +155,71 @@ def menu():
                     elif instagramSelect == "<":
                         socialMenu()
                 instagramSelect()
+            # SnapChat
             elif toolSelect == "4":
-                print(" SnapChat tools")
+                print(Fore.YELLOW + " SnapChat tools")
+                print()
+                print(Fore.CYAN + " [1]" + Fore.WHITE + " SnapStory - Scrape media from public SnapChat stories")
+                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main Menu")
+                print()
+                def snapSelect():
+                    time.sleep(0.5)
+                    snapSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+                    print()
+                    if snapSelect == "1":
+                        webbrowser.open("https://github.com/sdushantha/SnapStory")
+                    elif snapSelect == "<":
+                        socialMenu()
+                snapSelect()
+
+            # Reddit
             elif toolSelect == "5":
-                print(" Reddit tools")
+                    print(Fore.YELLOW + " Reddit tools")
+                    print()
+                    print(Fore.CYAN + " [1]" + Fore.WHITE + " Universal Reddit Scraper - Scrape Reddit posts using Reddit API")
+                    print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
+                    print()
+                    def redditSelect():
+                        time.sleep(0.5)
+                        redditSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+                        print()
+                        if redditSelect == "1":
+                            webbrowser.open("https://github.com/JosephLai241/Universal-Reddit-Scraper")
+                        elif redditSelect == "<":
+                            socialMenu()
+                    redditSelect()
+
+            # LinkedIn
             elif toolSelect == "6":
-                print(" LinkedIn tools")
+                print(Fore.YELLOW + " LinkedIn tools")
+                print()
+                print(Fore.CYAN + " [1]" + Fore.WHITE + " LinkedIn2Username - generate username lists from companies on LinkedIn")
+                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
+                print()
+                def linkedinSelect():
+                    linkedinSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+                    print()
+                    if linkedinSelect == "1":
+                        webbrowser.open("https://github.com/initstring/linkedin2username")
+                    elif linkedinSelect == "<":
+                        socialMenu()
+                linkedinSelect()
+
+            # YouTube
             elif toolSelect == "7":
-                print(" YouTube tools")
+                print(Fore.YELLOW + " YouTube tools")
+                print()
+                print(Fore.CYAN + " [1]" + Fore.WHITE + " YouTube DL - download YouTube videos from terminal ")
+                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
+                print()
+                def youtubeSelect():
+                    youtubeSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+                    print()
+                    if youtubeSelect == "1":
+                        webbrowser.open("https://github.com/ytdl-org/youtube-dl")
+                    elif youtubeSelect == "<":
+                        socialMenu()
+                youtubeSelect()
             elif toolSelect == "<":
                 menu()
             social()
@@ -170,7 +230,7 @@ def menu():
         print(Fore.CYAN + " [1]" + Fore.WHITE + " Scavenger - a crawler bot for credential leaks")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
         print()
-        
+
         # Paste tools
         def paste():
             time.sleep(0.5)
@@ -188,7 +248,7 @@ def menu():
         print(Fore.CYAN + " [1]" + Fore.WHITE + " TorBot - dark web OSINT tool")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
         print()
-        
+
         # Dark web tools
         def dark():
             time.sleep(0.5)
