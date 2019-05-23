@@ -5,7 +5,7 @@ import webbrowser
 import time
 import menu
 
-def r():
+def recon():
     time.sleep(0.5)
     toolSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
     if toolSelect == "1":
@@ -20,4 +20,4 @@ def r():
         webbrowser.open('https://spiderfoot.net') # Go to SpiderFoot homepage
     elif toolSelect == "<":
         menu.menu()
-    r()
+    recon()
