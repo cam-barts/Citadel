@@ -41,7 +41,7 @@ def menu():
         print(Fore.CYAN + " [5]" + Fore.WHITE + " SpiderFoot - automate OSINT from hundreds of sources")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
         print()
-        r()
+        recon()
 
     if directory == "2":
         print(Fore.YELLOW + " People search tools" + Fore.WHITE + " - extract OSINT from multiple databases")
