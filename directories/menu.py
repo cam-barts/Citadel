@@ -3,11 +3,11 @@ from colorama import init
 from colorama import Fore
 import webbrowser
 import time
-from recon import *
-from people import *
-from social import *
-from paste import *
-from dark import *
+from .recon import *
+from .people import *
+from .social import *
+from .paste import *
+from .dark import *
 
 
 init(autoreset=True)
