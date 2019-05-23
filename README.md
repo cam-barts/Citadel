@@ -13,3 +13,7 @@ People Search Tools
 Social Media Tools
 
 ![alt text](https://i.imgur.com/zZoCrqr.png)
+
+Paste Tools
+
+Dark Web Tools
