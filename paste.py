@@ -3,7 +3,7 @@ from colorama import init
 from colorama import Fore
 import webbrowser
 import time
-import citadel
+import menu
 
 # Paste tools
 def paste():
@@ -13,5 +13,5 @@ def paste():
     if toolSelect == "1":
         webbrowser.open("https://github.com/rndinfosecguy/Scavenger")
     if toolSelect == "<":
-        citadel.menu()
+        menu.menu()
     paste()
