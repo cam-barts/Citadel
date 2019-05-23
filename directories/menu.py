@@ -3,7 +3,7 @@ from colorama import init
 from colorama import Fore
 import webbrowser
 import time
-import recon
+from recon import recon
 from people import *
 from social import *
 from paste import *
