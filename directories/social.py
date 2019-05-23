@@ -3,7 +3,7 @@ from colorama import init
 from colorama import Fore
 import webbrowser
 import time
-import menu
+from . import menu
 
 # Social tools
 def socialMenu():
