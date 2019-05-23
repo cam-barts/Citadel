@@ -3,7 +3,7 @@ from colorama import init
 from colorama import Fore
 import webbrowser
 import time
-import citadel
+import menu
 
 # Social tools
 def socialMenu():
@@ -140,6 +140,6 @@ def socialMenu():
                         socialMenu()
                 youtubeSelect()
             elif toolSelect == "<":
-                citadel.menu()
+                menu.menu()
             social()
     social()
