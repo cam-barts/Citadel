@@ -8,6 +8,8 @@ from directories import recon
 from directories import people
 from directories import social
 from directories import paste
-from directories import dark 
+from directories import dark
+
+menu()
 
 init(autoreset=True)
