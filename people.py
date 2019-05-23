@@ -3,7 +3,6 @@ from colorama import init
 from colorama import Fore
 import webbrowser
 import time
-import citadel
 import menu
 
 def people():
@@ -18,5 +17,5 @@ def people():
     elif toolSelect == "4":
         webbrowser.open('https://github.com/sherlock-project/sherlock') # Go to Sherlock Github page
     elif toolSelect == "<":
-        citadel.menu()
+        menu.menu()
     people()
