@@ -43,7 +43,7 @@ def menu():
         print()
         recon()
 
-    if directory == "2":
+    elif directory == "2":
         print(Fore.YELLOW + " People search tools" + Fore.WHITE + " - extract OSINT from multiple databases")
         print()
         print(Fore.CYAN + " [1]" + Fore.WHITE + " Skiptracer - scrape PII paywall sites on a ramen noodle budget")
@@ -54,11 +54,11 @@ def menu():
         print()
         people()
 
-    if directory == "3":
+    elif directory == "3":
         socialMenu()
         social()
 
-    if directory == "4":
+    elif directory == "4":
         print(" Paste site tools - collect OSINT from multiple paste sites")
         print()
         print(Fore.CYAN + " [1]" + Fore.WHITE + " Scavenger - a crawler bot for credential leaks")
@@ -66,7 +66,7 @@ def menu():
         print()
         paste()
 
-    if directory == "5":
+    elif directory == "5":
         print(" Dark web tools - collect OSINT from dark web sources")
         print()
         print(Fore.CYAN + " [1]" + Fore.WHITE + " TorBot - dark web OSINT tool")
@@ -74,6 +74,6 @@ def menu():
         print()
         dark()
 
-    if directory == "x":
+    elif directory == "x":
         exit()
 menu()
