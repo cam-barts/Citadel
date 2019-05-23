@@ -3,8 +3,8 @@ from colorama import init
 from colorama import Fore
 import webbrowser
 import time
-from directories import menu
+from directories import menu as m
 
-menu()
+m.menu()
 
 init(autoreset=True)
