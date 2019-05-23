@@ -19,5 +19,5 @@ def recon():
     elif toolSelect == "5":
         webbrowser.open('https://spiderfoot.net') # Go to SpiderFoot homepage
     elif toolSelect == "<":
-        citadel.menu()
+        menu.menu()
     recon()
