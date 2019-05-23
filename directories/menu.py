@@ -60,7 +60,7 @@ def menu():
         social()
 
     elif directory == "4":
-        print(Fore.YELLOW + " Paste site tools" + Fore.WHITE " - collect OSINT from multiple paste sites")
+        print(Fore.YELLOW + " Paste site tools" + Fore.WHITE + " - collect OSINT from multiple paste sites")
         print()
         print(Fore.CYAN + " [1]" + Fore.WHITE + " Scavenger - a crawler bot for credential leaks")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
@@ -68,7 +68,7 @@ def menu():
         paste()
 
     elif directory == "5":
-        print(Fore.YELLOW + " Dark web tools" + Fore.WHITE " - collect OSINT from dark web sources")
+        print(Fore.YELLOW + " Dark web tools" + Fore.WHITE + " - collect OSINT from dark web sources")
         print()
         print(Fore.CYAN + " [1]" + Fore.WHITE + " TorBot - dark web OSINT tool")
         print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
