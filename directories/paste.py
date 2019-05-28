@@ -8,7 +8,7 @@ from . import menu
 # Paste tools
 def paste():
     time.sleep(0.5)
-    toolSelect = input(Fore.YELLOW + " Select: ")
+    toolSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
     print()
     if toolSelect == "1":
         webbrowser.open("https://github.com/rndinfosecguy/Scavenger")
