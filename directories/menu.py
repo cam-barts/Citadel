@@ -28,6 +28,8 @@ def menu():
     print(Fore.CYAN + " [4]" + Fore.WHITE + " Paste site tools")
     print(Fore.CYAN + " [5]" + Fore.WHITE + " Dark web tools")
     print()
+    print(Fore.YELLOW + " New tools available in the Citadel: POCKINT, InstaLoader, CardPwn, Onioff")
+    print()
     print(Fore.RED + " [x]" + Fore.WHITE + " Exit")
     print()
     directory = input(" Select a directory: ")
