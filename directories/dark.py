@@ -12,5 +12,5 @@ def dark():
     if toolSelect == "1":
         webbrowser.open("https://github.com/DedSecInside/TorBot")
     if toolSelect == "<":
-        citadel.menu()
+        menu.menu()
     dark()
