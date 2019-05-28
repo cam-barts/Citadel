@@ -62,7 +62,8 @@ def socialMenu():
             elif toolSelect == "3":
                 print(Fore.YELLOW + " Instagram tools")
                 print()
-                print(Fore.CYAN + " [1]" + Fore.WHITE + " InstaLooter - Instagram scraper for photos and videos (no-API)")
+                print(Fore.CYAN + " [1]" + Fore.WHITE + " InstaLooter - Instagram scraper for photos and videos")
+                print(Fore.CYAN + " [2]" + Fore.WHITE + " InstaLoader - Download media, captions, and other metadata from Instagram")
                 print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
                 print()
                 def instagramSelect():
@@ -71,6 +72,8 @@ def socialMenu():
                     print()
                     if instagramSelect == "1":
                         webbrowser.open("https://github.com/althonos/InstaLooter")
+                    elif instagramSelect == "2":
+                        webbrowser.open("https://github.com/instaloader/instaloader")
                     elif instagramSelect == "<":
                         socialMenu()
                 instagramSelect()

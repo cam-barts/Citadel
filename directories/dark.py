@@ -11,6 +11,8 @@ def dark():
     toolSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
     if toolSelect == "1":
         webbrowser.open("https://github.com/DedSecInside/TorBot")
-    if toolSelect == "<":
+    elif toolSelect == "2":
+        webbrowser.open("https://github.com/k4m4/onioff")
+    elif toolSelect == "<":
         menu.menu()
     dark()

@@ -18,6 +18,8 @@ def recon():
         webbrowser.open('https://github.com/thewhiteh4t/FinalRecon') # Go to FinalRecon GitHub page
     elif toolSelect == "5":
         webbrowser.open('https://spiderfoot.net') # Go to SpiderFoot homepage
+    elif toolSelect == "6":
+        webbrowser.open('https://github.com/netevert/pockint') # Go to SpiderFoot homepage
     elif toolSelect == "<":
         menu.menu()
     recon()

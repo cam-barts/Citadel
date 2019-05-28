@@ -12,6 +12,8 @@ def paste():
     print()
     if toolSelect == "1":
         webbrowser.open("https://github.com/rndinfosecguy/Scavenger")
-    if toolSelect == "<":
+    elif toolSelect == "2":
+        webbrowser.open("https://github.com/itsmehacker/CardPwn")
+    elif toolSelect == "<":
         menu.menu()
     paste()
