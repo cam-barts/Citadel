@@ -12,9 +12,12 @@ def banner():
  ██║     ██║   ██║   ██╔══██║██║  ██║██╔══╝  ██║
  ╚██████╗██║   ██║   ██║  ██║██████╔╝███████╗███████╗
   ╚═════╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝
+  A library of OSINT tools
   """
     print(banner)
 
+def announce(announcement):
+    print(Fore.YELLOW + announcement)
 
 def menu_option(selector, option):
     """Generates a standardized menu option
@@ -77,11 +80,11 @@ class Menu(object):
         Returns:
         selection -- User selection from menu
         """
-        print(Fore.YELLOW + self.title + " " + Fore.WHITE + self.description + "\n") # Standardized Display of title and description
+        print("\n" + Fore.YELLOW + self.title + " " + Fore.WHITE + self.description + "\n") # Standardized Display of title and description
         for option in self.options: # For each option in list of options, write a menu option, adjusting for zero based indexing
             indx = self.options.index(option)
             menu_option(str(indx + 1), option)
-        print("\n" + Fore.RED + " [x]" + Fore.WHITE + " Exit") # Standardized exit for prompt
+        print("\n" + Fore.RED + " [x]" + Fore.WHITE + " Exit" + "\n") # Standardized exit for prompt
         selection = get_sanitized_selection(
             "Select a directory: ", 0, len(self.options)
         )
@@ -154,5 +157,6 @@ class WebNavMenu(Menu):
             tools = list(self.tools.keys())
             dict_key = tools[menu_option - 1] # Adjusting for zero based index 
             webbrowser.open(self.tools[dict_key])
+            self.show_menu()
         else:
             self.super_menu.show_menu() # Navigate to the webpage

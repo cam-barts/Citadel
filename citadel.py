@@ -1,4 +1,4 @@
-from utils import WebNavMenu, SuperMenu, banner
+from utils import WebNavMenu, SuperMenu, banner, announce
 from tools import * # Import the dictionaries of tools
 
 
@@ -38,4 +38,5 @@ def main():
 
 if __name__ == "__main__":
     banner() # Display the banner
+    announce("New tools available in the Citadel: POCKINT, InstaLoader, CardPwn, Onioff")
     main()
