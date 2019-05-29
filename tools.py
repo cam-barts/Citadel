@@ -1,3 +1,8 @@
+""" This file holds the tools that show up in the menus.
+    To add tools, simply add key value pairs to the list that makes sense
+"""
+
+
 recon_tools = {
     "Photon - an incredibly fast crawler designed for OSINT": "https://github.com/s0md3v/Photon",
     "GasMask - an all in one OSINT gathering tool": "https://github.com/twelvesec/gasmask",

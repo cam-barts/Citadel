@@ -1,8 +1,13 @@
 from utils import WebNavMenu, SuperMenu, banner
-from tools import *
+from tools import * # Import the dictionaries of tools
 
 
 def main():
+    """Main function of the Citadel program
+
+    It generates WebNavMenus based on the dictionaries in the "tools.py" file, and then generates a SuperMenu for all of the WebNavMenus
+    Class definitions can be found in the "utils.py" file
+    """
     recon_menu = WebNavMenu(
         "Recon Menu",
         "- all in one OSINT tools that serve multiple functions",
@@ -22,6 +27,8 @@ def main():
     dark_menu = WebNavMenu(
         "Dark web tools", " - collect OSINT from dark web sources", dark_tools
     )
+
+    # Create the main menu from the sub menus
     main_menu = SuperMenu(
         "Main Menu",
         sub_menus=[recon_menu, people_menu, social_menu, paste_menu, dark_menu],
@@ -30,5 +37,5 @@ def main():
 
 
 if __name__ == "__main__":
-    banner()
+    banner() # Display the banner
     main()
