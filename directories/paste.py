@@ -4,6 +4,9 @@ from colorama import Fore
 import webbrowser
 import time
 from . import menu
+import subprocess
+
+init(autoreset=True)
 
 # Paste tools
 def paste():
@@ -11,9 +14,42 @@ def paste():
     toolSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
     print()
     if toolSelect == "1":
-        webbrowser.open("https://github.com/rndinfosecguy/Scavenger")
+        print(Fore.RED + " Scavenger - a crawler bot for credential leaks")
+        print()
+        options = [
+        Fore.CYAN + " [1]" + Fore.WHITE + " View the tool",
+        Fore.CYAN + " [2]" + Fore.WHITE + " Download the tool",
+        Fore.CYAN + " [<]" + Fore.WHITE + " Main menu"
+        ]
+        print(*options,sep='\n')
+        print()
+        view_or_download = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+        if view_or_download == "1":
+            webbrowser.open('https://github.com/rndinfosecguy/Scavenger')
+            paste()
+        elif view_or_download == "2":
+            subprocess.call(['git', 'clone', 'https://github.com/rndinfosecguy/Scavenger.git'])
+            paste()
+        elif view_or_download == "<":
+            menu.menu()
     elif toolSelect == "2":
-        webbrowser.open("https://github.com/itsmehacker/CardPwn")
+        print(Fore.RED + " CardPwn - OSINT Tool to find breached credit card information")
+        print()
+        options = [
+        Fore.CYAN + " [1]" + Fore.WHITE + " View the tool",
+        Fore.CYAN + " [2]" + Fore.WHITE + " Download the tool",
+        Fore.CYAN + " [<]" + Fore.WHITE + " Main menu",
+        ]
+        print(*options,sep='\n')
+        print()
+        view_or_download = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+        if view_or_download == "1":
+            webbrowser.open('https://github.com/itsmehacker/CardPwn')
+            paste()
+        elif view_or_download == "2":
+            subprocess.call(['git', 'clone', 'https://github.com/itsmehacker/CardPwn.git'])
+            paste()
+        elif view_or_download == "<":
+            menu.menu()
     elif toolSelect == "<":
         menu.menu()
-    paste()
