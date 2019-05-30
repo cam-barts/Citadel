@@ -9,16 +9,18 @@ from . import menu
 def socialMenu():
     print(Fore.YELLOW + " Social media tools" + Fore.WHITE + " - collect OSINT from various social media platforms")
     print()
-    print(Fore.CYAN + " [1]" + Fore.WHITE + " Facebook")
-    print(Fore.CYAN + " [2]" + Fore.WHITE + " Twitter")
-    print(Fore.CYAN + " [3]" + Fore.WHITE + " Instagram")
-    print(Fore.CYAN + " [4]" + Fore.WHITE + " SnapChat")
-    print(Fore.CYAN + " [5]" + Fore.WHITE + " Reddit")
-    print(Fore.CYAN + " [6]" + Fore.WHITE + " LinkedIn")
-    print(Fore.CYAN + " [7]" + Fore.WHITE + " YouTube")
-    print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
+    platforms = [
+    Fore.CYAN + " [1]" + Fore.WHITE + " Facebook",
+    Fore.CYAN + " [2]" + Fore.WHITE + " Twitter",
+    Fore.CYAN + " [3]" + Fore.WHITE + " Instagram",
+    Fore.CYAN + " [4]" + Fore.WHITE + " SnapChat",
+    Fore.CYAN + " [5]" + Fore.WHITE + " Reddit",
+    Fore.CYAN + " [6]" + Fore.WHITE + " LinkedIn",
+    Fore.CYAN + " [7]" + Fore.WHITE + " YouTube",
+    Fore.CYAN + " [<]" + Fore.WHITE + " Main menu",
+    ]
+    print(*platforms, sep='\n')
     print()
-
     def social():
             time.sleep(0.5)
             toolSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
@@ -28,9 +30,11 @@ def socialMenu():
             if toolSelect == "1":
                 print(Fore.YELLOW + " Facebook tools")
                 print()
-                print(Fore.CYAN + " [1]" + Fore.WHITE + " Entropy - Facebook OSINT Collection and Analysis Tool")
-                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
-                print()
+                tools = [
+                Fore.CYAN + " [1]" + Fore.WHITE + " Entropy - Facebook OSINT Collection and Analysis Tool",
+                Fore.CYAN + " [<]" + Fore.WHITE + " Main menu"
+                ]
+                print(*tools, sep='\n')
                 def facebookSelect():
                     time.sleep(0.5)
                     facebookSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
@@ -45,9 +49,11 @@ def socialMenu():
             elif toolSelect == "2":
                 print(Fore.YELLOW + " Twitter tools")
                 print()
-                print(Fore.CYAN + " [1]" + Fore.WHITE + " Twint - an advanced Twitter scraper")
-                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
-                print()
+                tools = [
+                Fore.CYAN + " [1]" + Fore.WHITE + " Twint - an advanced Twitter scraper",
+                Fore.CYAN + " [<]" + Fore.WHITE + " Main menu",
+                ]
+                print(*tools, sep='\n')
                 def twitterSelect():
                     time.sleep(0.5)
                     twitterSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
@@ -56,16 +62,20 @@ def socialMenu():
                         webbrowser.open("https://github.com/twintproject/twint")
                     elif twitterSelect == "<":
                         socialMenu()
+                    else:
+                        print("Please select a tool")
                 twitterSelect()
 
             # Instagram
             elif toolSelect == "3":
                 print(Fore.YELLOW + " Instagram tools")
                 print()
-                print(Fore.CYAN + " [1]" + Fore.WHITE + " InstaLooter - Instagram scraper for photos and videos")
-                print(Fore.CYAN + " [2]" + Fore.WHITE + " InstaLoader - Download media, captions, and other metadata from Instagram")
-                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
-                print()
+                tools = [
+                Fore.CYAN + " [1]" + Fore.WHITE + " InstaLooter - Instagram scraper for photos and videos",
+                Fore.CYAN + " [2]" + Fore.WHITE + " InstaLoader - Download media, captions, and other metadata from Instagram",
+                Fore.CYAN + " [<]" + Fore.WHITE + " Main menu",
+                ]
+                print(*tools, sep='\n')
                 def instagramSelect():
                     time.sleep(0.5)
                     instagramSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
@@ -81,9 +91,11 @@ def socialMenu():
             elif toolSelect == "4":
                 print(Fore.YELLOW + " SnapChat tools")
                 print()
-                print(Fore.CYAN + " [1]" + Fore.WHITE + " SnapStory - Scrape media from public SnapChat stories")
-                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main Menu")
-                print()
+                tools = [
+                Fore.CYAN + " [1]" + Fore.WHITE + " SnapStory - Scrape media from public SnapChat stories",
+                Fore.CYAN + " [<]" + Fore.WHITE + " Main Menu",
+                ]
+                print(*tools, sep='\n')
                 def snapSelect():
                     time.sleep(0.5)
                     snapSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
@@ -98,9 +110,11 @@ def socialMenu():
             elif toolSelect == "5":
                     print(Fore.YELLOW + " Reddit tools")
                     print()
-                    print(Fore.CYAN + " [1]" + Fore.WHITE + " Universal Reddit Scraper - Scrape Reddit posts using Reddit API")
-                    print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
-                    print()
+                    tools = [
+                    Fore.CYAN + " [1]" + Fore.WHITE + " Universal Reddit Scraper - Scrape Reddit posts using Reddit API",
+                    Fore.CYAN + " [<]" + Fore.WHITE + " Main menu"
+                    ]
+                    print(*tools, sep='\n')
                     def redditSelect():
                         time.sleep(0.5)
                         redditSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
@@ -115,9 +129,11 @@ def socialMenu():
             elif toolSelect == "6":
                 print(Fore.YELLOW + " LinkedIn tools")
                 print()
-                print(Fore.CYAN + " [1]" + Fore.WHITE + " LinkedIn2Username - generate username lists from companies on LinkedIn")
-                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
-                print()
+                tools = [
+                Fore.CYAN + " [1]" + Fore.WHITE + " LinkedIn2Username - generate username lists from companies on LinkedIn",
+                Fore.CYAN + " [<]" + Fore.WHITE + " Main menu",
+                ]
+                print(*tools,sep='\n')
                 def linkedinSelect():
                     linkedinSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
                     print()
@@ -131,9 +147,11 @@ def socialMenu():
             elif toolSelect == "7":
                 print(Fore.YELLOW + " YouTube tools")
                 print()
-                print(Fore.CYAN + " [1]" + Fore.WHITE + " YouTube DL - download YouTube videos from terminal ")
-                print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
-                print()
+                tools = [
+                Fore.CYAN + " [1]" + Fore.WHITE + " YouTube DL - download YouTube videos from terminal ",
+                Fore.CYAN + " [<]" + Fore.WHITE + " Main menu",
+                ]
+                print(*tools,sep='\n')
                 def youtubeSelect():
                     youtubeSelect = input(Fore.YELLOW + " Select: " + Fore.WHITE)
                     print()
