@@ -24,10 +24,14 @@ def paste():
         print(*options,sep='\n')
         print()
         view_or_download = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+        print()
         if view_or_download == "1":
             webbrowser.open('https://github.com/rndinfosecguy/Scavenger')
             paste()
         elif view_or_download == "2":
+            print(Fore.CYAN + " [+] " + Fore.WHITE + "Downloading Scavenger")
+            time.sleep(0.5)
+            print()
             subprocess.call(['git', 'clone', 'https://github.com/rndinfosecguy/Scavenger.git'])
             paste()
         elif view_or_download == "<":
@@ -43,10 +47,14 @@ def paste():
         print(*options,sep='\n')
         print()
         view_or_download = input(Fore.YELLOW + " Select: " + Fore.WHITE)
+        print()
         if view_or_download == "1":
             webbrowser.open('https://github.com/itsmehacker/CardPwn')
             paste()
         elif view_or_download == "2":
+            print(Fore.CYAN + " [+] " + Fore.WHITE +  "Downloading CardPwn")
+            time.sleep(0.5)
+            print()
             subprocess.call(['git', 'clone', 'https://github.com/itsmehacker/CardPwn.git'])
             paste()
         elif view_or_download == "<":
