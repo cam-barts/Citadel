@@ -37,25 +37,29 @@ def menu():
     if directory == "1":
         print(Fore.YELLOW + " Recon tools" + Fore.WHITE + " - all in one OSINT tools that serve multiple functions")
         print()
-        print(Fore.CYAN + " [1]" + Fore.WHITE + " Photon - an incredibly fast crawler designed for OSINT")
-        print(Fore.CYAN + " [2]" + Fore.WHITE + " GasMask - an all in one OSINT gathering tool")
-        print(Fore.CYAN + " [3]" + Fore.WHITE + " Kamerka - build an interactive map of cameras from Shodan")
-        print(Fore.CYAN + " [4]" + Fore.WHITE + " FinalRecon - an OSINT tool for all in one web reconnaissance")
-        print(Fore.CYAN + " [5]" + Fore.WHITE + " SpiderFoot - automate OSINT from hundreds of sources")
-        print(Fore.CYAN + " [6]" + Fore.WHITE + " POCKINT - a portable OSINT Swiss Army Knife for DFIR professionals")
-        print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
-        print()
+        tools = [
+        Fore.CYAN + " [1]" + Fore.WHITE + " Photon - an incredibly fast crawler designed for OSINT",
+        Fore.CYAN + " [2]" + Fore.WHITE + " GasMask - an all in one OSINT gathering tool",
+        Fore.CYAN + " [3]" + Fore.WHITE + " Kamerka - build an interactive map of cameras from Shodan",
+        Fore.CYAN + " [4]" + Fore.WHITE + " FinalRecon - an OSINT tool for all in one web reconnaissance",
+        Fore.CYAN + " [5]" + Fore.WHITE + " SpiderFoot - automate OSINT from hundreds of sources",
+        Fore.CYAN + " [6]" + Fore.WHITE + " POCKINT - a portable OSINT Swiss Army Knife for DFIR professionals",
+        Fore.CYAN + " [<]" + Fore.WHITE + " Main menu"
+        ]
+        print(*tools, sep='\n')
         recon()
 
     elif directory == "2":
         print(Fore.YELLOW + " People search tools" + Fore.WHITE + " - extract OSINT from multiple databases")
         print()
-        print(Fore.CYAN + " [1]" + Fore.WHITE + " Skiptracer - scrape PII paywall sites on a ramen noodle budget")
-        print(Fore.CYAN + " [2]" + Fore.WHITE + " LittleBrother - information gathering tool for EU persons")
-        print(Fore.CYAN + " [3]" + Fore.WHITE + " SocialScan - check email addresses across all social platforms")
-        print(Fore.CYAN + " [4]" + Fore.WHITE + " Sherlock - search username availability across all social platforms")
-        print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
-        print()
+        tools = [
+        Fore.CYAN + " [1]" + Fore.WHITE + " Skiptracer - scrape PII paywall sites on a ramen noodle budget",
+        Fore.CYAN + " [2]" + Fore.WHITE + " LittleBrother - information gathering tool for EU persons",
+        Fore.CYAN + " [3]" + Fore.WHITE + " SocialScan - check email addresses across all social platforms",
+        Fore.CYAN + " [4]" + Fore.WHITE + " Sherlock - search username availability across all social platforms",
+        Fore.CYAN + " [<]" + Fore.WHITE + " Main menu"
+        ]
+        print(*tools, sep='\n')
         people()
 
     elif directory == "3":
@@ -65,18 +69,23 @@ def menu():
     elif directory == "4":
         print(Fore.YELLOW + " Paste site tools" + Fore.WHITE + " - collect OSINT from multiple paste sites")
         print()
-        print(Fore.CYAN + " [1]" + Fore.WHITE + " Scavenger - a crawler bot for credential leaks")
-        print(Fore.CYAN + " [2]" + Fore.WHITE + " CardPwn - OSINT Tool to find breached credit card information")
-        print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
-        print()
+        tools = [
+        Fore.CYAN + " [1]" + Fore.WHITE + " Scavenger - a crawler bot for credential leaks",
+        Fore.CYAN + " [2]" + Fore.WHITE + " CardPwn - OSINT Tool to find breached credit card information",
+        Fore.CYAN + " [<]" + Fore.WHITE + " Main menu",
+        ]
+        print(*tools,sep='\n')
         paste()
 
     elif directory == "5":
         print(Fore.YELLOW + " Dark web tools" + Fore.WHITE + " - collect OSINT from dark web sources")
         print()
-        print(Fore.CYAN + " [1]" + Fore.WHITE + " TorBot - dark web OSINT tool")
-        print(Fore.CYAN + " [2]" + Fore.WHITE + " Onioff - an onion url inspector for inspecting deep web links.")
-        print(Fore.CYAN + " [<]" + Fore.WHITE + " Main menu")
+        tools = [
+        Fore.CYAN + " [1]" + Fore.WHITE + " TorBot - dark web OSINT tool",
+        Fore.CYAN + " [2]" + Fore.WHITE + " Onioff - an onion url inspector for inspecting deep web links.",
+        Fore.CYAN + " [<]" + Fore.WHITE + " Main menu"
+        ]
+        print(*tools, sep='\n')
         print()
         dark()
 
