@@ -2,8 +2,6 @@
 from utils import WebNavMenu, SuperMenu, banner, announce
 from tools import * # Import the dictionaries of tools
 
-m.menu()
-
 
 def main():
     """Main function of the Citadel program
